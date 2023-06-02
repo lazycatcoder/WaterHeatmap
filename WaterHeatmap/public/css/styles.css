@@ -1,0 +1,171 @@
+body, html {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+.container {
+ position: relative;
+ height: 100%;
+ overflow: hidden;
+}
+
+.map {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+
+.heatmap {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ /*background-color: blue;*/
+ z-index: 0;
+}
+
+.temperature-scale {
+ position: absolute;
+ width: 50px;
+ height: 206px;
+ bottom: 20px;
+ left: 40px;
+ background: #ccc;
+ border: none;
+ border-radius: 5px;
+ transform: translateX(-50%);
+}
+
+.temperature-scale-gradient {
+ position: absolute;
+ width: 10px;
+ height: 200px;
+ top: 2px;
+ left: 10px;
+ border: solid 1px #bababa;
+ border-radius: 10px;
+ background: linear-gradient(to top, #0505d0, #057aef, #23a9fd, #60d8ff, #33FFCC, #1fd31f, #00ff21, #69ff63, #efef16, #ffc900, #ee8f01, #f86201, #FF0000);
+ transform: translateX(-50%);
+ z-index: 2;
+}
+
+.temperature-markers {
+ position: relative;
+ font-size: 10px;
+ color: blue;
+}
+
+.temperature-markers span {
+ margin: 35px;
+ position: relative;
+ display: block;
+ top: -31px;
+ right: 15px;
+}
+
+.btn{
+ position: absolute;
+ text-align: center;
+ overflow: hidden;
+ top: 10px;
+ left: 10px;
+ z-index: 2;
+}
+
+#save-button {
+ position: fixed;
+ display: block;
+ width: 100px;
+ height: 50px;
+ font-size: 10px;
+ text-transform: uppercase;
+ color: #0505d0;
+ background-color: #ccc;
+ border: none;
+ border-radius: 25px;
+ transition: transform 0.3s, height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out; /* Изменено */
+ overflow: hidden;
+ cursor: pointer;
+}
+
+#save-button.pressed {
+ transform: scale(0.95);
+ -webkit-transition: all 0.35s ease-in-out;
+ -moz-transition: all 0.35s ease-in-out;
+ -ms-transition: all 0.35s ease-in-out;
+ -o-transition: all 0.35s ease-in-out;
+ transition: all 0.35s ease-in-out;
+}
+
+#save-button:hover {
+ transform: scale(0.95);
+ -webkit-transition: all 0.35s ease-in-out;
+ -moz-transition: all 0.35s ease-in-out;
+ -ms-transition: all 0.35s ease-in-out;
+ -o-transition: all 0.35s ease-in-out;
+ transition: all 0.35s ease-in-out;
+}
+
+#save-button::before {
+ content: '';
+ display: block;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: -100%;
+ border-radius: 5px;
+ background-color: white;
+ transform-origin: left center;
+ transform: scaleX(0);
+ transition: transform 0.5s;
+ -webkit-transition: all 0.35s ease-in-out;
+ -moz-transition: all 0.35s ease-in-out;
+ -ms-transition: all 0.35s ease-in-out;
+ -o-transition: all 0.35s ease-in-out;
+}
+
+#save-button.downloading::before {
+ background-color: #0505d0;
+ transform: scaleX(1);
+}
+
+#save-button span {
+ position: relative;
+ z-index: 2;
+}
+
+.progress-bar {
+ position: fixed;
+ display: block;
+ width: 100%;
+ height: 3px;
+ background-color: #0505d0;
+ border-radius: 2px;
+ margin-top: 2px;
+ overflow: hidden;
+ animation: progressAnimation 2s linear infinite;
+}
+
+@keyframes progressAnimation {
+ 0% {
+  width: 0;
+ }
+ 100% {
+  width: 166px;
+ }
+}
+
+@keyframes blink {
+ 0% {
+  opacity: 0.2;
+ }
+ 100% {
+  opacity: 1;
+ }
+}

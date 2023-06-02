@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Temperature Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heatmap"></div>
+      <div class="temperature-scale">
+        <div class="temperature-scale-gradient"></div>
+        <div class="temperature-markers">
+          <span>50°C</span>
+          <span>25°C</span>
+          <span>0°C</span>
+          <span>-25°C</span>
+          <span>-50°C</span>
+        </div>
+      </div>
+      <div class="btn">
+        <button id="save-button">Download</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
