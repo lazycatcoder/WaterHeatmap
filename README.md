@@ -87,4 +87,8 @@ Open a web browser. In the address bar, enter *http://localhost:3000*
 
 For the application to work correctly before starting the server, in the JSON folder *('..\WaterHeatmap\json')* in the **compressed_YYYY-MM-DD.json** file, replace YYYY-MM-DD with the current year, month and day.
 
+<br>
+
+🔴 During the development of the application, emphasis was placed on the fact that the data with which the heat map is generated will come in JSON format. It is important to note that in this project the JSON files are not actual, but exemplary and contain an artificially created array with thermal labels, which are represented as coordinates and temperature indicators (x, y, value).
+
 </div>
